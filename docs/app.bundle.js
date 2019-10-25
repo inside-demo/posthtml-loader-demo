@@ -33,18 +33,35 @@
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
 /******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -62,27 +79,34 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./app.js");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports) {
+/******/ ({
 
-module.exports = "<!DOCTYPE html> <html lang=en> <head> <title></title> <script>foo&&bar(6)</script> </head> <body> <h1>Pug - node template engine</h1> <div class=col id=container> <p>Get on it!</p> <p> Pug is a terse and simple templating language with a strong focus on performance and powerful features. </p> </div> <div block=MadTeaParty> <div elem=march-hare>March Hare</div> </div> </body> </html>";
-
-/***/ }),
-/* 1 */
+/***/ "./app.js":
+/*!****************!*\
+  !*** ./app.js ***!
+  \****************/
+/*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_html__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_html___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__index_html__);
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.html */ \"./index.html\");\n/* harmony import */ var _index_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_html__WEBPACK_IMPORTED_MODULE_0__);\n\n\ndocument.body.innerHTML = _index_html__WEBPACK_IMPORTED_MODULE_0___default.a;\n\n//# sourceURL=webpack:///./app.js?");
 
+/***/ }),
 
-document.body.innerHTML = __WEBPACK_IMPORTED_MODULE_0__index_html___default.a;
+/***/ "./index.html":
+/*!********************!*\
+  !*** ./index.html ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n  <head>\\n    <title></title>\\n    <script type=\\\"text/javascript\\\">if (foo) bar(1 + 5)</script>\\n  </head>\\n  <body>\\n    <h1>Pug - node template engine</h1>\\n    <div class=\\\"col\\\" id=\\\"container\\\">\\n      <p>Get on it!</p>\\n      <p>\\n        Pug is a terse and simple templating language with a\\n        strong focus on performance and powerful features.\\n        \\n      </p>\\n    </div>\\n    <div block=\\\"MadTeaParty\\\">\\n      <div elem=\\\"march-hare\\\">March Hare</div>\\n    </div>\\n  </body>\\n</html>\";\n\n//# sourceURL=webpack:///./index.html?");
 
 /***/ })
-/******/ ]);
+
+/******/ });
