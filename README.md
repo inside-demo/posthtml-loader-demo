@@ -1,2 +1,2 @@
 # posthtml-loader-demo
-Simple example use posthtml-loader
+Example use posthtml-loader
